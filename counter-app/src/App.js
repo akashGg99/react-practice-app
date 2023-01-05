@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
 
 function App() {
+
+  let [var1,setvar1] = useState(0)
+
+const IncreaseVar = function(){
+  setvar1(var1=var1+1)
+  console.log("inc",var1)
+}
+
+const DecreaseVar= function(){
+  setvar1(var1--)
+  console.log("dec",var1)
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello hi</h1>
+      <p>Click Counter</p>
+      <p id="var1">{var1}</p>
+      <button onClick={IncreaseVar}>Up!</button>
+      <button onClick={DecreaseVar}>Down!</button>
     </div>
   );
 }
