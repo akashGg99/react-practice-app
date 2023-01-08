@@ -11,7 +11,7 @@ const IncreaseVar = function(){
 }
 
 const DecreaseVar= function(){
-  setvar1(var1--)
+  setvar1(--var1)
   console.log("dec",var1)
 }
 
@@ -26,4 +26,17 @@ const DecreaseVar= function(){
   );
 }
 
+
+function component2(props){
+
+  return(
+    <div>
+      <p>content2  {props.title}</p>
+    </div>
+  )
+}
+
+
+
 export default App;
+
